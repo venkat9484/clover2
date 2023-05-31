@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git 'https://github.com/venkat9484/clover2.git'
+        git url: 'https://github.com/venkat9484/clover2.git', branch: 'main'
       }
     }
     stage('Test') {
