@@ -10,7 +10,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'mvn test clover:setup clover:aggregate clover:clover'
+        sh 'mvn clean clover:setup test clover:aggregate clover:clover'
       }
     }
     stage('Clover-Report') {
